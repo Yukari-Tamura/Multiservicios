@@ -1,0 +1,9 @@
+.contenedor {
+    background-color: #f4fafd;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}

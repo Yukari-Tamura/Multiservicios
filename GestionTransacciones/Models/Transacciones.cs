@@ -13,7 +13,7 @@ namespace GestionTransacciones.Models
 
         public string tipoTransaccion { get; set; } = null;
 
-        public string idProducto { get; set; } = null;
+        public int idProducto { get; set; }
 
         public int cantidad { get; set; }
 

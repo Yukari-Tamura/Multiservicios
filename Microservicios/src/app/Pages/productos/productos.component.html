@@ -15,7 +15,7 @@
         >
     </div>
     <table class="table table-striped">
-        <thead>
+        <thead class="bg-dark">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nombre</th>
@@ -33,7 +33,9 @@
                 <td>{{producto.nombre}}</td>
                 <td>{{producto.descripcion}}</td>
                 <td>{{producto.categoria}}</td>
-                <td>{{producto.imagen}}</td>
+                <td>
+                  <img src="{{producto.imagen}}" class="img" alt="">
+                </td>
                 <td>{{producto.precio}}</td>
                 <td>{{producto.stock}}</td>
                 <td>

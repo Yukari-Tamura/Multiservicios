@@ -71,6 +71,35 @@ namespace GestionProductos.Controllers
             return Ok(productoExistente);
         }
 
+        [HttpPut]
+        [Route("editar/stock")]
+        public async Task<IActionResult> ActualizarStock(int id, int stock, string tipo)
+        {
+            var productoExistente = await _context.Productos.FindAsync(id);
+            var stockAnterior = productoExistente!.stock;
+            var nuevoStock = 0;
+            if (tipo == "Ventas")
+            {
+                if (stockAnterior < stock)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    nuevoStock = stockAnterior - stock;
+                }  
+            }
+            else if (tipo == "Compra")
+            {
+                nuevoStock = stockAnterior + stock;
+            }
+            productoExistente!.stock = nuevoStock;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(productoExistente);
+        }
+
         [HttpDelete]
         public async Task<IActionResult> EliminarProducto(int id)
         {

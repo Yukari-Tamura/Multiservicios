@@ -1,3 +1,9 @@
 .card {
     border: none !important;
+    background-color: transparent;
+}
+
+.contenedor {
+    background-color: #f4fafd;
+    padding: 20px;
 }

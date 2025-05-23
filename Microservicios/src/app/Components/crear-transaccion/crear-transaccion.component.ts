@@ -89,6 +89,11 @@ export class CrearTransaccionComponent {
         return;
       }
 
+      if(this.transaccion.cantidad === 0){
+        Sweetalert.fnc("error", 'La cantidad no puede ser menor o igual a cero.')
+        return;
+      }
+
       this.transaccionesService.crearTransaccion(this.transaccion).subscribe((resp) => {
         Sweetalert.fnc("success", 'Transaccion exitosa.')
   

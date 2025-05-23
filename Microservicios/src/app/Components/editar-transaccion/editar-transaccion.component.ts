@@ -113,6 +113,11 @@ export class EditarTransaccionComponent implements OnInit {
         return;
       }
 
+      if(this.transaccion.cantidad === 0){
+        Sweetalert.fnc("error", 'La cantidad no puede ser menor o igual a cero.')
+        return;
+      }
+
       //Validaciones complejas
       if(this.transaccion.cantidad as any > this.stockProducto && this.transaccion.tipoTransaccion === 'Ventas'){
         Sweetalert.fnc("error", 'La cantidad ha vender no puede exceder el total.')

@@ -6,6 +6,7 @@ using GestionTransacciones.Data;
 using GestionTransacciones.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Http;
 
 namespace GestionTransacciones.Controllers
 {
@@ -15,8 +16,13 @@ namespace GestionTransacciones.Controllers
     {
 
         private readonly TransaccionContexto _context;
-        public TransaccionController(TransaccionContexto transaccionContexto)
+        private readonly HttpClient _httpClient;
+        private readonly string _stockApiBaseUrl;
+
+        public TransaccionController(TransaccionContexto transaccionContexto, HttpClient httpClient)
         {
+            _httpClient = httpClient;
+            _stockApiBaseUrl = "http://localhost:5130/api/Productos/editar/stock";
             _context = transaccionContexto;
         }
 
@@ -29,9 +35,24 @@ namespace GestionTransacciones.Controllers
         [HttpPost]
         public async Task<ActionResult<Transacciones>> AgregarTransaccion(Transacciones transacciones)
         {
-            _context.Transacciones.Add(transacciones);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetTransacciones), new { id = transacciones.id }, transacciones);
+
+           var urlConParametros = $"{_stockApiBaseUrl}?id={transacciones.idProducto}&stock={transacciones.cantidad}&tipo={transacciones.tipoTransaccion}";
+
+            var response = await _httpClient.PutAsync(urlConParametros, null);
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                _context.Transacciones.Add(transacciones);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetTransacciones), new { id = transacciones.id }, transacciones);
+            }
+            else
+            {
+                return Ok(new { Message = "Falla con la api" }); ;
+            }
+
+             
         }
 
         [HttpGet]
