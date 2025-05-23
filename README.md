@@ -21,8 +21,12 @@ dotnet-sdk-9.0.300
 dotnet add package Swashbuckle.AspNetCore 'Opcional para ver la api'
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer 'Para la conexion con la base de datos sql'
 dotnet add package Microsoft.EntityFrameworkCore.Tools
-
 De la misma manera realiza estos pasos en el proyecto de GestionTransacciones
+
+--Para la base de datos
+--Puedes importar la base de datos directamente en SQL 
+-- O Utiliza el script de informacion el que te ayudara a crear la base y las tablas adicional se adjunta informacion para hacer pruebas
+
 
 --Algunas capturas del sistema funcionando
 
@@ -104,7 +108,18 @@ MENSAJE DE EXITO Y PRODUCTO AGREGADO
 
 
 
-NOTA: No olvides hacer uso de los filtros que se encuentran en las tablas
+NOTA: No olvides cambiar la configuracion y credenciales de base datos en los servicios para ello ve a appsetting.json y cambia
+"DefaultConnection": "Server=DESKTOP-SKN1Q42\\SQLEXPRESS;Database=Demo;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=false "
+adjuntando tus credenciales
+
+--De igual forma recuerda los puertos pueden cambiar para ello en angular en los servicios de api cambiar los puertos de localhost si es necesario
+
+--Muchas gracias por llegar hasta aqui
+--Creado: Javier Imbaquinga
+--Fecha Creacion: 23/05/2025
+--Contactanos: javi_d16@hotmail.es o nuestro numero +593 983499837
+
+https://img.freepik.com/vector-premium/gracias-texto-letras-vectoriales-espanol-muchas-gracias-frase-dibujada-mano-manuscrito-moderno_81863-7776.jpg?w=360
 
 
 
