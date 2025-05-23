@@ -1,0 +1,74 @@
+<div class="titulo mt-4">
+    <span>Productos</span>
+    <button class="btn btn-primary agregar" (click)="agregarProducto()">
+        Agregar
+    </button>
+</div>
+<div class="m-4">
+    <div class="card col-md-4">
+        <span class="titulo-filtro">Filtrar Información</span>
+        <input
+        type="text"
+        [(ngModel)]="filtro"
+        placeholder="Buscar por nombre, descripcion,precio..."
+        class="input-filtro"
+        >
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of datosPaginaActual | filter: filtro: ['nombre', 'descripcion', 'categoria','precio','stock']">
+                <td>{{producto.id}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.descripcion}}</td>
+                <td>{{producto.categoria}}</td>
+                <td>{{producto.imagen}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.stock}}</td>
+                <td>
+                    <button (click)="editarInformacion(producto.id)" class="btn btn-warning mr-2">Editar</button>
+                    <button (click)="eliminarProducto(producto.id)" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="paginador">
+    <div class="items-per-page">
+      <span class="titulo-paginator">Elementos por página:</span>
+      <select class="select-paginador" (change)="onElementosPorPaginaChange($event)" [(ngModel)]="elementosPorPagina">
+        <option *ngFor="let opcion of opcionesElementosPorPagina" [value]="opcion">
+          {{ opcion }}
+        </option>
+      </select>
+    </div>
+
+    <button class="btn-paginador" (click)="paginaAnterior()" [disabled]="paginaActual === 1">Anterior</button>
+
+    <ng-container *ngFor="let page of botonesPagina">
+      <button
+      class="page"
+        (click)="irAPagina(page)"
+        [class.active-page]="paginaActual === page"
+      >
+        {{ page }}
+      </button>
+    </ng-container>
+
+    <button class="btn-paginador" (click)="siguientePagina()" [disabled]="paginaActual === totalPaginas">Siguiente</button>
+
+    <span class="info-paginador">Página {{ paginaActual }} de {{ totalPaginas }} (Total: {{ totalElementos }} ítems)</span>
+  </div>
+

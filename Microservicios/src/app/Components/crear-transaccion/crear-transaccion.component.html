@@ -1,0 +1,60 @@
+    <div class="card col-md-8">
+        <div class="card-group">
+            <div class="card p-2">
+                <div class="form-group">
+                    <label>Tipo Transaccion</label>
+                    <select class="form-control" name="selectSimple" id="selectSimple"
+                        [(ngModel)]="transaccion.tipoTransaccion">
+                        <option *ngFor="let item of tipoTransaccion" [value]="item['nombre']">{{item['nombre']}}
+                        </option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="card p-2">
+                <div class="form-group">
+                    <label for="selectSimple">Seleccione Productos:</label>
+                    <select (change)="cargarInformacionProducto($event)" class="form-control" name="selectSimple"
+                        id="selectSimple" [(ngModel)]="transaccion.idProducto">
+                        <option *ngFor="let item of productos" [value]="item.id">{{item.nombre}}</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="card p-2">
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input (change)="calcularTotal($event)" class="form-control" placeholder="Ingresa Categoria"
+                        [(ngModel)]="transaccion.cantidad">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card col-md-4">
+        <div class="card-group">
+            <div class="card p-2">
+                <div class="form-group">
+                    <label>Precio unitario</label>
+                    <input disabled="true" class="form-control" placeholder="Ingresa Imagen"
+                        [(ngModel)]="transaccion.precioUnitario">
+
+                </div>
+            </div>
+            <div class="card p-2">
+                <div class="form-group">
+                    <label>Precio Total</label>
+                    <input disabled="true" class="form-control" placeholder="Ingresa Precio"
+                        [(ngModel)]="transaccion.precioTotal">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card col-md-8 p-2">
+        <div class="form-group">
+            <label>Detalle</label>
+            <input class="form-control" placeholder="Ingresa Detalle" [(ngModel)]="transaccion.detalle">
+        </div>
+    </div>
+<button class="btn btn-primary" (click)="agregarTransaccion()">Enviar</button>

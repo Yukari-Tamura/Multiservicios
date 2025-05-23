@@ -1,0 +1,51 @@
+.contenido {
+    background-color: #1c1d1f;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 200px;
+}
+
+.titulo {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.datos {
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+.copy {
+    color: #f80cb1;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.bt {
+    margin-top: 25px;
+    background-color: #f80cb1;
+    padding: 8px;
+    border-radius: 50px;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.5s;
+
+}
+
+.btn:hover {
+    background-color: #670349;
+    cursor: pointer;
+}

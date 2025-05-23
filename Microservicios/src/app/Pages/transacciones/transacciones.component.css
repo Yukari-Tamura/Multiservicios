@@ -1,0 +1,77 @@
+.titulo {
+    span {
+        background-color: #d2e4ff;
+        color: #3035d5;
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+}
+
+.agregar {
+    position: absolute;
+    right:20px;
+}
+
+.paginador {
+    background-color: rgb(238, 245, 255);
+    margin: 20px;
+    padding: 10px;
+}
+
+.titulo-paginator {
+    font-size: 12px;
+    font-weight: 600;
+    color: #707181;
+    margin-left: 10px;
+}
+
+.btn-paginador {
+    background-color: rgb(55, 61, 79);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 20px;
+    color: #f1f1fe;
+}
+
+.page {
+    background-color: rgb(233, 239, 252);
+    border: none;
+}
+
+.info-paginador {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #40404b;
+}
+
+.card {
+    border:none !important;
+}
+
+.titulo-filtro {
+        background-color: #e5f0ff;
+        color: #3035d5;
+        font-weight: 600;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 12px;
+        width:150px;
+        margin-bottom: 10px;
+}
+
+.input-filtro {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 300px;
+    color: #171717;
+    border: solid 1px #e8f0ff;
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 15px;
+    outline: none;
+}

@@ -1,0 +1,76 @@
+<div class="titulo mt-4">
+    <span>Transacciones</span>
+    <button class="btn btn-primary agregar" (click)="agregarTransaccion()">
+        Agregar
+    </button>
+</div>
+<div class="m-4">
+  <div class="card col-md-4">
+        <span class="titulo-filtro">Filtrar Información</span>
+        <input
+        type="text"
+        [(ngModel)]="filtro"
+        placeholder="Buscar por fecha, detalle,producto,cantidad..."
+        class="input-filtro"
+        >
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo Transaccion</th>
+                <th scope="col">Detalle</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio Unitario</th>
+                <th scope="col">Total</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaccion of datosPaginaActual | filter: filtro: ['fecha', 'tipoTransaccion', 'detalle','cantidad','precioUnitario','precioTotal']">
+                <td>{{transaccion.id}}</td>
+                <td>{{transaccion.fecha}}</td>
+                <td>{{transaccion.tipoTransaccion}}</td>
+                <td>{{transaccion.detalle}}</td>
+                <td>{{transaccion.idProducto}}</td>
+                <td>{{transaccion.cantidad}}</td>
+                <td>{{transaccion.precioUnitario}}</td>
+                <td>{{transaccion.precioTotal}}</td>
+                <td>
+                    <button (click)="editarTransaccion(transaccion.id)" class="btn btn-warning mr-2">Editar</button>
+                    <button (click)="eliminarTransaccion(transaccion.id)" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+ <div class="paginador">
+    <div class="items-per-page">
+      <span class="titulo-paginator">Elementos por página:</span>
+      <select class="select-paginador" (change)="onElementosPorPaginaChange($event)" [(ngModel)]="elementosPorPagina">
+        <option *ngFor="let opcion of opcionesElementosPorPagina" [value]="opcion">
+          {{ opcion }}
+        </option>
+      </select>
+    </div>
+
+    <button class="btn-paginador" (click)="paginaAnterior()" [disabled]="paginaActual === 1">Anterior</button>
+
+    <ng-container *ngFor="let page of botonesPagina">
+      <button
+      class="page"
+        (click)="irAPagina(page)"
+        [class.active-page]="paginaActual === page"
+      >
+        {{ page }}
+      </button>
+    </ng-container>
+
+    <button class="btn-paginador" (click)="siguientePagina()" [disabled]="paginaActual === totalPaginas">Siguiente</button>
+
+    <span class="info-paginador">Página {{ paginaActual }} de {{ totalPaginas }} (Total: {{ totalElementos }} ítems)</span>
+  </div>
+
