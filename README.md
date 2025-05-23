@@ -40,34 +40,69 @@ Servicio Transacciones
 
 SISTEMA ANGULAR
 
-![image](https://github.com/user-attachments/assets/f6faa65a-81f2-4b60-9d60-bc434a777be3)
+PANTALLA INICIO
+![image](https://github.com/user-attachments/assets/be9d7097-2fcd-44c3-93b5-d3bd619c83c5)
+
+PANTALLA DE PRODUCTO
+-LISTAR PRODUCTOS
+![image](https://github.com/user-attachments/assets/5c356318-baa6-49af-9a5c-fa5752563f44)
+
+--CREAR PRODUCTO
+![image](https://github.com/user-attachments/assets/329d5c35-09da-4b41-a5f8-1b107209859d)
+
+MENSAJE DE EXITO Y PRODUCTO AGREGADO
+![image](https://github.com/user-attachments/assets/c21d0476-bb62-4708-a9a5-52d39328396f)
+
+--EDITAR PRODUCTO
+![image](https://github.com/user-attachments/assets/147882f0-56c0-4af0-b2e1-c68d740eb06e)
+
+--VALIDACIONES
+![image](https://github.com/user-attachments/assets/1f01147e-9661-4a62-8f2c-49e52ffa311e)
+
+--ELIMINAR PRODUCTO
+
+![image](https://github.com/user-attachments/assets/a4dbdc85-239a-4f8c-9d0e-a452e1e74edf)
+
+--FILTROS
+![image](https://github.com/user-attachments/assets/41b3a9b2-e9bc-4181-8411-a55dd97dd33f)
+
+--PANTALLA DE TRANSACCIONES
+![image](https://github.com/user-attachments/assets/6178c07f-4036-457e-a73c-669c0bd1affe)
+
+--CREAR TRANSACCION
+![image](https://github.com/user-attachments/assets/b9f9f481-6df7-4122-ad33-d27bf61ff29b)
+
+--MENSAJE DE EXITO
+![image](https://github.com/user-attachments/assets/d1209c7e-ddf4-4ea7-a313-7ae08dabea7a)
+
+--EDITAR TRANSACCION
+![image](https://github.com/user-attachments/assets/0fa5fc97-bb5f-47f8-8bcb-2436df25d6ee)
+
+--VALIDACIONES
+![image](https://github.com/user-attachments/assets/e2941ea7-7e15-40e5-9ebb-76263204ad0f)
+
+![image](https://github.com/user-attachments/assets/19f91138-e95b-436c-a3c6-195b8c844b7c)
+
+--FILTROS
+![image](https://github.com/user-attachments/assets/3e6823f1-7e85-42fd-9691-36fb4341c53e)
+
+--PAGINADOR
+![image](https://github.com/user-attachments/assets/ec8f868e-7ef5-4663-add6-1066545406b1)
+
+![image](https://github.com/user-attachments/assets/753c52b6-9e9e-41bc-9775-a42a4a9d67e6)
 
 
-![image](https://github.com/user-attachments/assets/b5fc4d2c-a3ca-48d6-b44a-4eaa33aab494)
 
 
-![image](https://github.com/user-attachments/assets/1c71cfd1-ae33-48c0-ab3f-9e4bb4497949)
-
-![image](https://github.com/user-attachments/assets/47aad2cb-cce5-4a3f-9040-ca072f032d85)
 
 
-![image](https://github.com/user-attachments/assets/4d9b29d5-9182-417d-b021-4e90ae4cdd26)
 
 
-![image](https://github.com/user-attachments/assets/248975f0-ea4b-498c-91ae-5cd699e4ba33)
-
-TRANSACCIONES
-
-![image](https://github.com/user-attachments/assets/00108745-8174-4be8-bcc5-7d7ea2cdf591)
-
-![image](https://github.com/user-attachments/assets/e5304a49-137f-41c8-8d5f-e32c5ab1ec6e)
-
-![image](https://github.com/user-attachments/assets/59c4004b-df3d-48e2-9e0d-863eed50c0fd)
 
 
-![image](https://github.com/user-attachments/assets/46e0458b-93ce-48c3-bdf5-5cac3938d44a)
 
-![image](https://github.com/user-attachments/assets/3845c4d3-c486-4d75-b2f2-81daa8b2aafa)
+
+
 
 NOTA: No olvides hacer uso de los filtros que se encuentran en las tablas
 
