@@ -159,3 +159,4 @@ C:\Users\Roxana Jones\Documents\Proyectos\Microservicios\GestionTransacciones\ob
 C:\Users\Roxana Jones\Documents\Proyectos\Microservicios\GestionTransacciones\obj\Debug\net9.0\GestionTransacciones.pdb
 C:\Users\Roxana Jones\Documents\Proyectos\Microservicios\GestionTransacciones\obj\Debug\net9.0\GestionTransacciones.genruntimeconfig.cache
 C:\Users\Roxana Jones\Documents\Proyectos\Microservicios\GestionTransacciones\obj\Debug\net9.0\ref\GestionTransacciones.dll
+C:\Users\Roxana Jones\Documents\Proyectos\Microservicios\GestionTransacciones\obj\Debug\net9.0\GestionTransacciones.sourcelink.json

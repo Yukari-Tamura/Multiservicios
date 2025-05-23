@@ -67,7 +67,7 @@ export class CrearProductoComponent {
     this.productosService.crearProducto(this.productos).subscribe((resp) => {
       Sweetalert.fnc("success", 'Producto agregado exitosamente.')
       this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-        this.router.navigate(['/Productos']);
+        this.router.navigate(['/Inicio/Productos']);
       })
     },
     (error) => {console.log('Error ', error)})

@@ -76,7 +76,7 @@ export class TransaccionesComponent {
 
 
   agregarTransaccion() {
-    const currentUrl = 'agregarTransaccion';
+    const currentUrl = 'Inicio/agregarTransaccion';
   
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
         this.router.navigate([currentUrl]);
@@ -87,7 +87,7 @@ export class TransaccionesComponent {
   editarTransaccion(id:any){
     this.comunicadorService.updateTransaction(id);     
 
-    const currentUrl = 'editarTransaccion';
+    const currentUrl = 'Inicio/editarTransaccion';
   
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
         this.router.navigate([currentUrl]);

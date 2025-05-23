@@ -69,7 +69,7 @@ export class ProductosComponent {
 
 
   agregarProducto(){
-    const currentUrl = 'agregarProducto';
+    const currentUrl = 'Inicio/agregarProducto';
   
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
         this.router.navigate([currentUrl]);
@@ -79,7 +79,7 @@ export class ProductosComponent {
   editarInformacion(id:any){
     this.comunicadorService.updateDate(id);
 
-    const currentUrl = 'editarProducto';
+    const currentUrl = 'Inicio/editarProducto';
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
         this.router.navigate([currentUrl]);
       })

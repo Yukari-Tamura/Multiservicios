@@ -125,7 +125,7 @@ export class EditarTransaccionComponent implements OnInit {
        
   
         this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-            this.router.navigate(['/Transacciones']);
+            this.router.navigate(['/Inicio/Transacciones']);
         })
       })
 

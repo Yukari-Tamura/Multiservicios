@@ -80,7 +80,7 @@ export class EditarProductoComponent implements OnInit {
     this.productosService.actualizarProducto(this.idProducto,this.productos).subscribe((resp) => {
       Sweetalert.fnc("success", 'Producto Editado Exitosamente.')
       this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-        this.router.navigate(['/Productos']);
+        this.router.navigate(['/Inicio/Productos']);
       })
     },
   (error) => {
